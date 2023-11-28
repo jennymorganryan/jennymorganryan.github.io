@@ -1,6 +1,66 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    hi
-  </body>
-</html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>✨Trivia✨</h1>
+        </div>
+        <script>
+            window.addEventListener('load', function () {
+                document.querySelector('#correct').addEventListener('click', function () {
+                    let ifCorrect = document.querySelector('#correct');
+                    ifCorrect.style.backgroundColor = 'green';
+                    console.log("correct!");
+                });
+
+                document.querySelector('.incorrect').addEventListener('click', function () {
+                    let ifIncorrect = document.querySelectorAll('.incorrect');
+                    for (let i = 0; i < ifIncorrect.length; i++) {
+                        ifIncorrect[i].addEventListener('click', function () {
+                            ifIncorrect[i].style.backgroundColor = 'red';
+                            console.log("incorrect");
+                        });
+                    }
+                });
+
+                document.querySelector('#check').addEventListener('click', function () {
+                    let input = document.querySelector('#input');
+                    if (input.value.toLowerCase() === 'costa rica') {
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#feedback').innerHTML = 'Correct!';
+                    } else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#feedback').innerHTML = 'Incorrect';
+                    }
+                });
+            });
+        </script>
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice</h2>
+                <h3>Michaelangelo hated to create what?</h3>
+                <button class="incorrect">Sculptures</button>
+                <button id="correct">Paintings</button>
+                <button class="incorrect">Architecture</button>
+                <button class="incorrect">Poetry</button>
+            </div>
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <form>
+                    <h3>Where does the phrase "Pura Vida" come from?</h3>
+                    <input autocomplete="off" autofocus placeholder="type answer here" type="text" id="input">
+                    <button id="check">check answer</button>
+                    <p id="feedback"></
+</p>
+
+                    </form>
+            </div>
+        </div>
+
+    </body>
+    </html>
