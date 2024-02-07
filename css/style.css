@@ -65,7 +65,29 @@ z-index: 10;
     position: absolute;
     top: 60px;
     font-size: 41px;
-    text-transform: capitalize;
-
     
+   
+    
+}
+
+.aside .logo a
+{
+    color: var(--text-black-900);
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 800;
+}
+
+.aside .logo a span
+{
+ 
+    font-family: 'Honk';
+    font-family: 50px;
+
+} 
+
+.line-intro 
+{
+    font-size: 20px;
+
 }
