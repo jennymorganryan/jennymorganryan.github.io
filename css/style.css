@@ -1,7 +1,8 @@
 * {
     margin: 0px;
     padding: 0px;
-    box-sizing: border-box;    
+    box-sizing: border-box; 
+
 }
 
 .home-portrait {
@@ -10,7 +11,7 @@ height: 40vh;
 display: flex;
 justify-content: center;
 align-items:center;
-background-color:#EFFFF7;
+background-color:#FFE8D3;
 
 }
 
@@ -18,12 +19,15 @@ background-color:#EFFFF7;
 width: 180px;
 height: 180px;
 border-radius: 100%;
-border: 5px solid #EDC7B6;
-box-shadow: 10px 10px 10px lightblue;
+border: 3px solid rgba(255, 255, 255, 0.482);
+box-shadow: 10px 10px 20px lightblue;
 }
 
 .home-intro {
-    color: #EFFFF7;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    background-color:#EFFFF7;
+    flex-direction: column;
+    display: flex;
+    background-image: linear-gradient(#FFE8D3, #87D8DB)
 }
