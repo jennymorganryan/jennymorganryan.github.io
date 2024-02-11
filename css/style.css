@@ -58,6 +58,10 @@ justify-content: center;
    width: 100%;
    opacity: 0.8;
    z-index: 1000;
+   border-bottom-style: solid;
+   border-bottom-color: #053438;
+   border-bottom-width: 1px;
+   
 }
 
 .menu li {
@@ -76,7 +80,6 @@ color: #324B4C;
 padding: 0 20px;
 display: block;
 
-
 }
 
 .nav-home {
@@ -91,7 +94,9 @@ position: absolute;
 float: bottom;
 padding-top: 300px;
 z-index: 900;
-
+font-family: "Georgia";
+font-size: 20px;
+justify-content: center
 
 }
 
