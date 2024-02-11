@@ -7,7 +7,7 @@
 
 .home-portrait {
 width: 100%;
-height: 40vh;
+height: 65vh;
 display: flex;
 justify-content: center;
 align-items:center;
@@ -29,5 +29,13 @@ box-shadow: 10px 10px 20px lightblue;
     background-color:#EFFFF7;
     flex-direction: column;
     display: flex;
-    background-image: linear-gradient(#FFE8D3, #87D8DB)
+    background-image: linear-gradient(#FFE8D3, #003A3E);
 }
+
+.top-menu {
+    background-color:#FFFFFF;
+    position: fixed;
+    height: 8%;
+    width: 100%;
+}
+
