@@ -326,6 +326,7 @@ background-size: 100%;
 }
 .navbar__logo img {
   margin-left: 0px 0px 0px 30px;
+  margin-top: 10px;
   display: flex;
   float: top;
   align-items: top;
