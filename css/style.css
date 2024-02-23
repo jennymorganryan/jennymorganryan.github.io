@@ -109,14 +109,15 @@ align-items:center;
 }
 
 .home-portrait img{
-width: 220px;
-height: 220px;
+width: 280px;
+height: 280px;
 border-radius: 100%;
 border: 3px solid rgba(255, 255, 255, 0.482);
 box-shadow: 10px 10px 20px lightblue;
 z-index: 950;
 justify-content: center;
 transition: all 0.3s ease-in-out;
+margin-top: -80px;
 }
 
 .home-intro {
@@ -177,9 +178,9 @@ float: bottom;
 padding-top: 340px;
 z-index: 900;
 font-family: "Georgia";
-font-size: 20px;
-justify-content: center
-
+font-size: 30px;
+justify-content: center;
+margin-top: 35px;
 }
 .menu img {
   display: flex;
@@ -241,11 +242,11 @@ justify-content: center
     text-align: left;
     position: absolute;
     float: bottom;
-    margin-top: -160px;
+    margin-top: -100px;
     padding-top: 400px;
     z-index: 900;
     font-family: "Georgia";
-    font-size: 20px;
+    font-size: 30px;
     justify-content: left;
     
     }
