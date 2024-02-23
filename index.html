@@ -15,10 +15,17 @@
 </head>
 <body>
 <!-- ====== Mobile Home Menu ====== -->
+<div id="base-container"> 
+
+<div id="blurry-background">
+<div class="red circle"></div>
+<div class="blue circle"></div>
+
+</div>
 <nav class="navbar">
     <div class="navbar__container">
         <div class = "navbar__logo"> 
-        <img src="/images/JMR.png" height="180" width="180" alt="logo"> 
+        <img draggable="false" src="/images/JMR.png" height="180" width="180" alt="logo"> 
        </div>
         <div class="navbar__toggle" id="mobile-menu">
             <span class="bar"></span> <span class="bar"></span>
@@ -26,7 +33,7 @@
         </div>
         <ul class="navbar__menu">
             <li class="navbar__item">
-                <a style="text-decoration:none" href="/" class="navbar__links">About Me</a>
+                <a style="text-decoration:none" href="#about-me" class="navbar__links">About Me</a>
             </li>
             <li class="navbar__item">
                 <a style="text-decoration:none" href="/tech.html" class="navbar__links">Projects</a>
@@ -40,8 +47,8 @@
         </ul>
 <!-- ====== Full SizerHome Menu ====== -->
     <ul class="menu"> 
-        <li><img id= "full-logo"src="/images/JMR.png" height="100" width="100" alt="logo"></li>
-        <li><a href="#"> <i class="fa fa-user-circle"></i>About me</a></li>
+        <li><img draggable="false" id= "full-logo"src="/images/JMR.png" height="100" width="100" alt="logo"></li>
+        <li><a href="#about-me"> <i class="fa fa-user-circle"></i>About me</a></li>
         <li><a href="#"> <i class="fa fa-heart"></i> Projects </a></li>
         <li><a href="#"> <i class="fa fa-briefcase"></i>Professional Summary</a></li>
         <li><a href="#"> <i class="fa fa-address-book-o"></i>Contact me</a></li> 
@@ -52,20 +59,25 @@
 
 <!-- ====== Intro Image ====== -->
 <div class="home-portrait">
-    <img src="/images/IMG_0949 copy.jpeg" height="200" width="200" alt="Jenny">
-        <p  class="under-portrait"> Hello, i'm Jenny.<br>I'm a passionate coder shaping <br> my future as a software engineer</p>
+    <img draggable="false" src="/images/IMG_0949 copy.jpeg" height="200" width="200" alt="Jenny">
+        <p  class="under-portrait"> Hello, i'm Jenny.<br>I'm a passionate coder shaping <br> my future as a software engineer.</p>
           
       
 </div>
 
 
  <!-- ====== Introduction ====== -->
-<section class="home-intro">
-hello
+<section class="home-intro" id="about-me">
+<div class="about-body">
+    hello
+</div>
+
 </section>
+
 <!-- ====== Footer ====== -->
 <!-- ====== scroll up ====== -->
 <!-- ====== # ====== -->
+</div>
     <!-- ===== JS Files ======= -->
     <script src="js/personalPortfolio.js"></script>
 </body>

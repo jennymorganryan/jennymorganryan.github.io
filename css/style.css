@@ -5,6 +5,11 @@
     padding: 0;
     box-sizing: border-box; 
     list-style: none;
+    
+}
+.main {
+  padding: 2em;
+  color: white;
 }
 html {
     height: 100%;
@@ -21,14 +26,65 @@ html, body{
 
   body{
     min-height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
   }
+  #base-container {
+    position: relative;
+    font: 24px sans-serif;
+    overflow: hidden;
+  }
+  #blurry-background {
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -50%;
+    left: -30%;
+    background-color: #c3bca1;
+    z-index: -100;
+    filter: blur(5em);
+  }
+  
+  .circle {
+    position: absolute;
+    width: 11em;
+    height: 11em;
+
+    border-radius: 50%;
+    left: calc(50% - 5em);
+    top: calc(50% - 5em);
+  }
+  
+  .red {
+    background-color: rgb(223, 143, 68);
+    animation: redOrbit 10s linear infinite;
+  }
+  
+  .blue {
+    background-color: rgb(39, 122, 210);
+    animation: blueOrbit 10s linear infinite;
+  }
+  
+  @keyframes redOrbit {
+      from { transform: rotate(0deg) translateX(100%); }
+      to { transform: rotate(360deg) translateX(100%); }
+  }
+  
+  @keyframes blueOrbit {
+      from { transform: rotate(0deg) translateX(-100%); }
+      to { transform: rotate(360deg) translateX(-100%); }
+  }
+  
+  
+
 
 /* FULL VIEW */
   @media (min-width: 961px) {
     .nav-home {
       width: 100%;
       height: 100%;
-      background-color: #ffffff;
+      /* background-color: #ffffff; */
    
   }
     
@@ -44,11 +100,11 @@ html, body{
 }
 .home-portrait {
 width: 100vw;
-height: 80vh;
+height: 900px;
 display: flex;
 justify-content: center;
 align-items:center;
-background-color:#FFFFFF;
+/* background-color:#ffffff; */
 
 }
 
@@ -66,12 +122,9 @@ transition: all 0.3s ease-in-out;
 .home-intro {
     height: 100vh;
     width: 100vw;
-    background-color:#EFFFF7;
     flex-direction: column;
     display: flex;
-    background-image: linear-gradient(#FFFFFF, #a9cdca);
     background-size: cover;
-    
 }
 
 .menu {
@@ -82,7 +135,7 @@ transition: all 0.3s ease-in-out;
    background-color:#FFFFFF;
    height: 17%;
    width: 100%;
-   opacity: 0.9;
+   opacity: 0.8;
    z-index: 1000;
    border-bottom-style: solid;
    border-bottom-color: #053438;
@@ -100,8 +153,8 @@ line-height: 150px;
 
 .menu li a {
 text-decoration: none;
-font-size: 14px;
-font-family: arial;
+font-size: 18px;
+font-family: 'Georgia';
 color: #324B4C;
 padding: 0 25px;
 display: block;
@@ -133,7 +186,7 @@ justify-content: center
   justify-content: space-between;
   position: absolute;  
   margin-left: -200px;
-  margin-top: -60px; 
+  margin-top: -69px; 
   padding: 0;
   height: 130px;
   width: 130px;
@@ -152,21 +205,21 @@ justify-content: center
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Kumbh Sans', sans-serif;
   }
   .home-portrait {
     width: 100vw;
-    height: 50vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items:center;
-    background-color:#FFFFFF;
+    /* background-color:#FFFFFF; */
     
     }
     
     .home-portrait img{
     width: 250px;
     height: 250px;
+    margin-bottom: 100px;
     border-radius: 100%;
     border: 3px solid rgba(255, 255, 255, 0.482);
     box-shadow: 10px 10px 20px lightblue;
@@ -181,18 +234,19 @@ justify-content: center
         background-color:#EFFFF7;
         flex-direction: column;
         display: flex;
-        background-image: linear-gradient(#FFFFFF, #a9cdca);
+        background-image: linear-gradient(#FFFFFF, #f2f8f7);
         background-size: cover;
   }
   .under-portrait {
     text-align: left;
     position: absolute;
     float: bottom;
+    margin-top: -90px;
     padding-top: 400px;
     z-index: 900;
     font-family: "Georgia";
     font-size: 20px;
-    justify-content: center
+    justify-content: left;
     
     }
   .menu {
@@ -251,11 +305,15 @@ justify-content: center
   background: #ffffff;
   
 }
-/* .fa-gem {
-margin-right: 0.5rem;
-} */
+/* WHERE WE LEFT OFF FEB. 22*/
+.navbar__item:hover {
+  background: #dde7e5;
+  transition: all .10s ease;
+  -webkit-transition: all .10s ease;
+}
+
 .navbar__menu.active {
-  background-image: linear-gradient(#FFFFFF, #d9dcdc);
+  background-image: linear-gradient(#FFFFFF, #e1e6e6);
   top: 100%;
   opacity: 0.9;
   transition: all 0.5s ease;
@@ -286,6 +344,9 @@ text-align: center;
 padding: 2rem;
 width: 100%;
 display: table ;
+color: #053438;
+font-family: 'Trocchi', serif;
+
 }
 
 #mobile-menu {
@@ -320,11 +381,8 @@ display: table ;
   color: #000000;
   transition: all 0.3s ease;
 }
-.navbar__links {
-  color: #494f4f;
-  font-family: 'Trocchi', serif;
-  font-weight: bold;
-}
+
+
   
   #mobile-menu.is-active .bar:nth-child(2) {
     opacity: 0; 
