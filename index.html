@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
+    <title>Personal Portfolio</title>
     <!-- ===== CSS Files ===== -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/skins/color-1.css">
@@ -14,16 +14,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-<!-- ====== Home Menu ====== -->
-<nav class="nav-home">
+<!-- ====== Mobile Home Menu ====== -->
+<nav class="navbar">
+    <div class="navbar__container">
+        <div class = "navbar__logo"> 
+        <img src="/images/JMR.png" height="180" width="180" alt="logo"> 
+       </div>
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span> <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a style="text-decoration:none" href="/" class="navbar__links">About Me</a>
+            </li>
+            <li class="navbar__item">
+                <a style="text-decoration:none" href="/tech.html" class="navbar__links">Projects</a>
+            </li>
+            <li class="navbar__item">
+                <a style="text-decoration:none" href="/tech.html" class="navbar__links">Professional Summary</a>
+            </li>
+            <li class="navbar__item">
+                <a style="text-decoration:none" href="/tech.html" class="navbar__links">Contact Me</a>
+            </li>
+        </ul>
+<!-- ====== Full SizerHome Menu ====== -->
     <ul class="menu"> 
-        <li><a href="#" class="active"> <i class="fa fa-home"></i> Home</a></li>
+        <li><img id= "full-logo"src="/images/JMR.png" height="100" width="100" alt="logo"></li>
         <li><a href="#"> <i class="fa fa-user-circle"></i>About me</a></li>
         <li><a href="#"> <i class="fa fa-heart"></i> Projects </a></li>
         <li><a href="#"> <i class="fa fa-briefcase"></i>Professional Summary</a></li>
         <li><a href="#"> <i class="fa fa-address-book-o"></i>Contact me</a></li> 
     </ul>
+</div>
 </nav>  
+
 
 <!-- ====== Intro Image ====== -->
 <div class="home-portrait">
