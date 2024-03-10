@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/v4-shims.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/v5-font-face.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
 </head>
 <body>
 <!-- ====== Mobile Home Menu ====== -->
@@ -35,10 +36,10 @@
     </div>
         <ul class="navbar__menu">
             <li class="navbar__item">
-                <a style="text-decoration:none" href="#about-me" class="navbar__links">About Me</a>
+                <a style="text-decoration:none" href="#bullets" class="navbar__links">About Me</a>
             </li>
             <li class="navbar__item">
-                <a style="text-decoration:none" href="/tech.html" class="navbar__links">Projects</a>
+                <a style="text-decoration:none" href="#bottom" class="navbar__links">Projects</a>
             </li>
             <li class="navbar__item">
                 <a style="text-decoration:none" href="/tech.html" class="navbar__links">Professional Summary</a>
@@ -51,7 +52,7 @@
     <ul class="menu"> 
         <li><img draggable="false" id= "full-logo"src="/images/JMR.png" height="100" width="100" alt="logo"></li>
         <li><a href="#about-me"> <i class="fa fa-user-circle"></i>About me</a></li>
-        <li><a href="#"> <i class="fa fa-heart"></i> Projects </a></li>
+        <li><a href="#bottom"> <i class="fa fa-heart"></i> Projects </a></li>
         <li><a href="#"> <i class="fa fa-briefcase"></i>Professional Summary</a></li>
         <li><a href="#"> <i class="fa fa-address-book-o"></i>Contact me</a></li> 
     </ul>
@@ -61,23 +62,80 @@
 
 <!-- ====== Intro Image ====== -->
 <div class="home-portrait">
-    <img draggable="false" src="/images/IMG_0949 copy.jpeg" height="200" width="200" alt="Jenny">
-        <p  class="under-portrait"> Hello, i'm Jenny.<br>I'm a passionate coder shaping <br> my future as a software engineer.</p>
-          
-      
+    <img draggable="false" src="/images/Jenny_Smize.jpg" height="200" width="200" alt="Jenny">
+        <p  class="under-portrait"> Hello, i'm Jenny.<br>I'm a passionate coder shaping <br> my future as a software engineer.</p>     
 </div>
 
 
- <!-- ====== Introduction ====== -->
+ <!-- ====== ABOUT ME ====== -->
 <section class="home-intro" id="about-me">
-<div class="about-body">
-    hello
+    <p id="about-body">
+        Hello, my name is Jenny Morgan Ryan. I am an avid learner and passionate coding student. Thanks to CSX, the grassroots led platform by Harvard and MIT, I was introduced to computer science in 2022, two years after graduating with my Bachelors of Science in Psychology. At that point I was working on my business (which I have now sold to pursue this career). As soon as I learned about coding it was love at first sight. I was more than intrigued by the topic and the world of tech, I knew right then this was going to be my career. From then, I have taken a non-traditional route to break tech. Going back to school to get my Associates in Computer Science, a lot of self teaching, and going the bootcamp route have given me a holistic set of skills!
+    </p>
+    <img class="glam" draggable="false" src="/images/IMG_6305 copy.jpeg" height="200" width="200" alt="about-me">
+<h1 class="about" id="about-heading">
+    About
+    </h1>
+</section>
+<div class="project-section"> 
+    <img id="line" draggable="false" src="/images/Line1.png">
+    <h1 id="project-header"> Projects </h1>
 </div>
 
-</section>
 
-<!-- ====== Footer ====== -->
-<!-- ====== scroll up ====== -->
+<!-- ====== PROJECTS SLIDER ====== -->
+<div id="slider">
+    <input type="radio" name="slider" id="slide1" checked>
+    <input type="radio" name="slider" id="slide2">
+    <input type="radio" name="slider" id="slide3">
+    <input type="radio" name="slider" id="slide4">
+    <div id="slides">
+       <div id="overflow">
+          <div class="inner">
+             <div class="slide slide_1">
+                <div class="slide-content">
+                   <li><a href=""> <i id="ikea-link"></i></a>IKEA Adventure Game</li>
+                   <img draggable="false" src="/images/ikea.avif" id="ikea-image">
+                </div>
+             </div>
+             <div class="slide slide_2">
+                <div class="slide-content">
+                   <h2>Slide 2</h2>
+                   <p>hello 2</p>
+                </div>
+             </div>
+             <div class="slide slide_3">
+                <div class="slide-content">
+                   <h2>Slide 3</h2>
+                   <p>Content for Slide 3</p>
+                </div>
+             </div>
+             <div class="slide slide_4">
+                <div class="slide-content">
+                   <h2>Slide 4</h2>
+                   <p>Content for Slide 4</p>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+    <div id="controls">
+       <label for="slide1"></label>
+       <label for="slide2"></label>
+       <label for="slide3"></label>
+       <label for="slide4"></label>
+    </div>
+    <div id="bullets">
+       <label for="slide1"></label>
+       <label for="slide2"></label>
+       <label for="slide3"></label>
+       <label for="slide4"></label>
+    </div>
+ </div>
+<!-- ====== BOTTOM OF PAGE ====== -->
+<div id="bottom">
+
+</div>
 <!-- ====== # ====== -->
 </div>
     <!-- ===== JS Files ======= -->
