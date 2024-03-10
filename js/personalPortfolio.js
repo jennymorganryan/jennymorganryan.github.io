@@ -81,18 +81,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-// Adjust the scrolling speed factor (higher value for slower scrolling)
-const scrollSpeed = 0.5;
-
-// Function to handle the scroll event
-function handleScroll() {
-    // Calculate the amount to scroll based on the scroll speed
-    const scrollAmount = window.scrollY * scrollSpeed;
-
-    // Apply the transformation to scroll the entire body
-    document.body.style.transform = `translateY(${scrollAmount}px)`;
-}
-
-// Add the scroll event listener
-window.addEventListener('scroll', handleScroll);
