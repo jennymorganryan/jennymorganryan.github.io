@@ -30,25 +30,7 @@ html, body{
     padding: 0;
     border: 0;
   }
-  #ikea-text, #personal-website-text {
-    z-index: 1000;
-    font-size: 39px;
-    opacity: 1;
-    color: rgb(0, 0, 0);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
 
-  #ikea-image, #personal-website-image {
-    z-index: -1;
-  }
-
-  .slide-content {
-    position: relative;
-    text-align: center;
-  }
   /*ABOUT-PROJECT-INBETWEEN*/
   .inbetween {
     position: relative;
@@ -64,9 +46,9 @@ html, body{
   #line {
     margin: 0 auto;
     width: 100%;
-    height: 200px;
+    height: 300px;
     margin-top: -100px;
-    max-height: 200px;
+    max-height: 300px;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
   }
@@ -74,9 +56,10 @@ html, body{
     text-align: left;
     transition: opacity 0.5s ease-in-out;
     padding-bottom: 8%;
-    font-size: 90px;
+    font-size: 60px;
     text-align: left;
     opacity: 0;
+    font-family: 'calibri';
     transition: opacity 0.5s ease-in-out;
   }
 
@@ -135,19 +118,19 @@ html, body{
   height: 100%;
   width: 100%;
   position: relative;
-
   display: grid;
   grid-auto-rows: 30%;
   grid-column-gap: 3%;
   grid-row-gap: 30%;
-  margin-top: -80px;
+  margin-top: -60px;
+
 }
 .glam {
-  height: 415px;
-  width: 305px;
-  max-width: 305px;
-  min-width: 305px;
-  margin-top: 200px;
+  height: 200px;
+  width: 215px;
+  margin: 0 auto;
+  min-width: 215px;
+  margin-top: 250px;
   z-index: 49;
   grid-row: 1;
   grid-column: 2;
@@ -161,35 +144,60 @@ html, body{
 
   text-align: center;
   z-index: 50;
-  font-size: 100px;
-  margin-top: 80px;
+  font-size: 60px;
+  margin-top: 70px;
   grid-row: 2;
   grid-column: 2;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+  font-family: 'calibri';
 
 }
 #about-body { 
 z-index: 50;
 color:#053438;
-margin-top: 35%;
+margin-top: 30%;
 font-size: 18px;
 grid-row: 1 / 3;
 grid-column: 1;
 text-align: center;
 max-width: 950px;
+min-width: 200px;
 padding-left: 50px;
 opacity: 0;
 transition: opacity 0.5s ease-in-out;
+font-family: 'calibri'
 }
 
 /* FRONT PAGE SLIDER */
+
+#ikea-text, #personal-website-text {
+  z-index: 1000;
+  font-size: 39px;
+  opacity: 1;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#ikea-image, #personal-website-image {
+  z-index: -1;
+  object-fit: cover;
+}
+
+.slide-content {
+  position: relative;
+  text-align: center;
+}
+
 #slider {
   margin: 0 auto;
   width: 800px;
   max-width: 100%;
   text-align: center;
-  padding-bottom: 10%;
+  padding-bottom: 5%;
 }
 #slider input[type=radio] {
   display: none;
@@ -204,7 +212,18 @@ transition: opacity 0.5s ease-in-out;
   background: #fff;
   position: relative;
   z-index: 1;
+  gap: 20px;
+  overflow-x: scroll;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  -ms-verrflow-style: none;
+  overflow: -moz-scrollbars-none;
+  box-shadow: 0px 0px 80px #000000;
 }
+
+
+
+
 #overflow {
   width: 100%;
   overflow: hidden;
@@ -343,15 +362,15 @@ transition: opacity 0.5s ease-in-out;
   #line {
     margin: 0 auto;
     width: 100%;
-    height: 200px;
+    height: 400px;
     margin-top: -100px;
-    max-height: 200px;
+    max-height: 400px;
   }
   #project-header {
     text-align: left;
     transition: opacity 0.5s ease-in-out;
-    font-size: 100px;
-    
+    font-size: 60px;
+    font-family: 'calibri'
   }
   
   .home-intro {
@@ -385,15 +404,15 @@ align-items: center;
 }
 
 .home-portrait img{
-width: 310px;
-height: 375px;
+width: 300px;
+height: 390px;
 border-radius: 100%;
 border: 3px solid rgba(255, 255, 255, 0.482);
 box-shadow: 10px 10px 20px lightblue;
 z-index: 950;
 justify-content: center;
 transition: all 0.5s ease-in-out;
-margin-top: -150px;
+margin-top: -130px;
 }
 
 
@@ -414,6 +433,7 @@ margin-top: -150px;
    margin: 0 auto;  
    top: 0; 
 }
+
 
 .menu li {
 display: inline-block;
@@ -461,7 +481,7 @@ margin-top: 80px;
   margin-top: -69px; 
   padding: 0;
   height: 130px;
-  width: 140px;
+  width: 150px;
   opacity: 0.9;
 }
 
@@ -470,11 +490,9 @@ margin-top: 80px;
   width: 800px;
   max-width: 100%;
   text-align: center;
-  padding-bottom: 5%;
 }
 #bottom {
   position: relative;
-  padding-top: 50px;
 }
 
 } 
@@ -496,9 +514,9 @@ margin-top: 80px;
     }
     
     .home-portrait img{
-    width: 310px;
-    height: 375px;
-    margin-bottom: 150px;
+    width: 290px;
+    height: 380px;
+    margin-bottom: 200px;
     border-radius: 100%;
     border: 3px solid rgba(255, 255, 255, 0.482);
     box-shadow: 10px 10px 20px lightblue;
@@ -512,12 +530,13 @@ margin-top: 80px;
     text-align: left;
     position: absolute;
     float: bottom;
-    margin-top: -20px;
-    padding-top: 400px;
+    margin-top: 0px;
+    padding-top: 340px;
     z-index: 900;
     font-family: "Georgia";
     font-size: 30px;
     justify-content: left;
+    
     
     }
   .menu {
@@ -675,15 +694,62 @@ font-family: 'Trocchi', serif;
 
       padding-left: 30px;
       padding-right: 0;
-      padding-top: 50px;
+      padding-top: 110px;
       font-size: 14px;
-      margin-top: 50%;
-      max-width: 470px;;
-      
+      max-width: 1000px;
     }
-   
+
 }
 
+@media screen and (max-width: 480px) {
+.slide-content {
+  height: 100%;
+  width: 100%;
+  min-height: 200px;
+  min-width: 200px;
+  text-align: center;
+}
+#bullets {
+  visibility: hidden;
+}
 
+}
 
+/*EXPERIENCE PAGE*/
 
+/*EXPERIENCE PAGE LARGE SCREEN*/
+@media (min-width: 1021px) {
+
+}
+
+/*EXPERIENCE PAGE MOBILE SCREEN*/
+
+@media screen and (max-width: 1020px) {
+ .background-experience {
+opacity: 1;
+z-index: -1000;
+position: relative;
+height: 200px;
+ }
+ .costa {
+  height: 100vh;
+  width: 200vh;
+  opacity: 0.8;
+ }
+ .resume {
+  position: absolute;
+  z-index: 50;
+  top: 30px;
+  height: 700px;
+  width: 500px;
+
+  margin-left: auto;
+  margin-right: auto;
+  top: 200%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* margin: 0 auto; */
+
+ }
+  
+}
