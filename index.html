@@ -36,22 +36,22 @@
     </div>
         <ul class="navbar__menu">
             <li class="navbar__item">
-                <a style="text-decoration:none" href="/index.html" class="navbar__links">About Me</a>
+                <a style="text-decoration:none" href="#about-me" class="navbar__links">About Me</a>
             </li>
             <li class="navbar__item">
                 <a style="text-decoration:none" href="https://github.com/jennymorganryan" class="navbar__links">Github</a>
             </li>
             <li class="navbar__item">
-                <a style="text-decoration:none" href="/experience.html" class="navbar__links">Professional Summary</a>
+                <a style="text-decoration:none" href="../experience.html" class="navbar__links">Professional Summary</a>
             </li>
             <li class="navbar__item">
-                <a style="text-decoration:none" href="/tech.html" class="navbar__links">Contact Me</a>
+                <a style="text-decoration:none" href="/contact.html" class="navbar__links">Contact Me</a>
             </li>
         </ul>
 <!-- ====== Full SizerHome Menu ====== -->
     <ul class="menu"> 
         <li><img draggable="false" id= "full-logo"src="/images/JMR.png" height="100" width="100" alt="logo"></li>
-        <li><a href="/index.html"> <i class="fa fa-user-circle"></i>About me</a></li>
+        <li><a href="/index.html#about-me"> <i class="fa fa-user-circle"></i>About me</a></li>
         <li><a href="https://github.com/jennymorganryan"> <i class="fa fa-github"></i> Github </a></li>
         <li><a href="/experience.html"> <i class="fa fa-briefcase"></i>Professional Summary</a></li>
         <li><a href="#"> <i class="fa fa-address-book-o"></i>Contact me</a></li> 
@@ -84,58 +84,30 @@
 
 
 <!-- ====== PROJECTS SLIDER ====== -->
-<div id="slider">
-    <input type="radio" name="slider" id="slide1" checked>
-    <input type="radio" name="slider" id="slide2">
-    <input type="radio" name="slider" id="slide3">
-    <input type="radio" name="slider" id="slide4">
-    <div id="slides">
-       <div id="overflow">
-          <div class="inner">
-             <div class="slide slide_1">
-                <div class="slide-content">
-                    <a href="https://github.com/jennymorganryan/jennymorganryan.github.io"><img draggable="false" src="/images/personal-website.jpg" id="personal-website-image">
-                    </a>   
-                   <p class="slide-images"id="personal-website-text">Personal Website</p>
-                </div>
-             </div>
-             <div class="slide slide_2">
-                <div class="slide-content">
-                    <a href="https://github.com/jennymorganryan/IKEA-Adventure-Game"><img draggable="false" src="/images/ikea.avif" id="ikea-image">
-                    </a>   
-                    <p class="slide-images" id="ikea-text">
-                     IKEA Adventure Game
-                    </p>
-                </div>
-             </div>
-             <div class="slide slide_3">
-                <div class="slide-content">
-                   <h2></h2>
-                   <p id="DM-text">Digital Nomad Program</p>
-                </div>
-             </div>
-             <div class="slide slide_4">
-                <div class="slide-content">
-                   <h2></h2>
-                   <p id="CS-text">Codesmith Open Source Project</p>
-                </div>
-             </div>
-          </div>
-       </div>
+<div class="carousel-container">
+    <div class="carousel-imgs">
+    <img src="/images/personal-website.jpg" class="carousel-img visible"/>
+    <img src="/images/ikea.avif" class="carousel-img  hidden"/>
+    <img src="/images/plane.jpg" class="carousel-img  hidden"/>
+    <img src="/images/programming.jpg" class="carousel-img  hidden"/>
     </div>
-    <div id="controls">
-       <label for="slide1"></label>
-       <label for="slide2"></label>
-       <label for="slide3"></label>
-       <label for="slide4"></label>
+      <a class="prev arrow">&#10094;</a>
+      <a class="next arrow">&#10095;</a>
+    <div class="slide-numbers">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
     </div>
-    <div id="bullets">
-       <label for="slide1"></label>
-       <label for="slide2"></label>
-       <label for="slide3"></label>
-       <label for="slide4"></label>
+    
+  </div>
+  <div class="carousel-captions">
+    <a class="carousel-caption visible" href="https://github.com/jennymorganryan/jennymorganryan.github.io"> Personal Website</a>
+    <a class="carousel-caption hidden"href="https://github.com/jennymorganryan/IKEA-Adventure-Game"> IKEA Adventure Game</a>
+    <a class="carousel-caption hidden" href="https://github.com/jennymorganryan"> Digital Nomad API </a>
+    <a class="carousel-caption hidden" href=" https://github.com/jennymorganryan"> Codesmith Open Source Project </a>
     </div>
- </div>
+    
 <!-- ====== BOTTOM OF PAGE ====== -->
 <div id="bottom">
 </div>

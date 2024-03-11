@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const clickableBar = document.querySelector('#clickable-bar');
     const menu = document.querySelector('#mobile-menu');
@@ -65,31 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-const slider = document.querySelector('.inner'),
-  slides = Array.from(document.querySelectorAll('.slide-content'))
-
-let isDragging = false,
-  startPos = 0,
-  currentTranslate = 0,
-  prevTranslate = 0,
-  animationID = 0,
-  currentIndex = 0
-
-slides.forEach((slide, index) => {
-  const slideImage = slide.querySelector('img')
-  slideImage.addEventListener('dragstart', (e) => e.preventDefault())
-
-  // Touch events
-  slide.addEventListener('touchstart', touchStart(index))
-  slide.addEventListener('touchend', touchEnd)
-  slide.addEventListener('touchmove', touchMove)
-
-  // Mouse events
-  slide.addEventListener('mousedown', touchStart(index))
-  slide.addEventListener('mouseup', touchEnd)
-  slide.addEventListener('mouseleave', touchEnd)
-  slide.addEventListener('mousemove', touchMove)
-})
 
 // Disable context menu
 window.oncontextmenu = function (event) {
@@ -98,55 +74,65 @@ window.oncontextmenu = function (event) {
   return false
 }
 
-function touchStart(index) {
-  return function (event) {
-    currentIndex = index
-    startPos = getPositionX(event)
-    isDragging = true
+// Variables
+let prev = document.querySelector('.prev');
+let next = document.querySelector('.next');
+let imgs = document.querySelectorAll('.carousel-img');
+let dots = document.querySelectorAll('.dot');
+let captions = document.querySelectorAll('.carousel-caption')
+let totalImgs = imgs.length;
+let imgPosition = 0;
 
-    // https://css-tricks.com/using-requestanimationframe/
-    animationID = requestAnimationFrame(animation)
-    slider.classList.add('grabbing')
+// Event Listeners
+next.addEventListener('click', nextImg);
+prev.addEventListener('click', prevImg);
+
+// Update Position
+function updatePosition (){
+//   Images
+  for(let img of imgs){
+    img.classList.remove('visible');
+    img.classList.add('hidden');
   }
-}
-
-function touchEnd() {
-  isDragging = false
-  cancelAnimationFrame(animationID)
-
-  const movedBy = currentTranslate - prevTranslate
-
-  if (movedBy < -100 && currentIndex < slides.length - 1) currentIndex += 1
-
-  if (movedBy > 100 && currentIndex > 0) currentIndex -= 1
-
-  setPositionByIndex()
-
-  slider.classList.remove('grabbing')
-}
-
-function touchMove(event) {
-  if (isDragging) {
-    const currentPosition = getPositionX(event)
-    currentTranslate = prevTranslate + currentPosition - startPos
+  imgs[imgPosition].classList.remove('hidden');
+  imgs[imgPosition].classList.add('visible')
+//   Dots
+  for (let dot of dots) {
+     dot.className = dot.className.replace(" active", "");
   }
+    dots[imgPosition].classList.add('active');
+//   Captions
+  for (let caption of captions) {
+      caption.classList.remove('visible');
+      caption.classList.add('hidden');
+  }
+    captions[imgPosition].classList.remove('hidden');
+    captions[imgPosition].classList.add('visible')
 }
 
-function getPositionX(event) {
-  return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX
+// Next Img
+function nextImg(){
+  if (imgPosition === totalImgs -1){
+        imgPosition = 0;
+    } else{
+        imgPosition++;
+    }
+    updatePosition();
+}
+//Previous Image
+function prevImg(){
+  if (imgPosition === 0){
+        imgPosition = totalImgs-1;
+    } else{
+        imgPosition--;
+    }
+    updatePosition();
 }
 
-function animation() {
-  setSliderPosition()
-  if (isDragging) requestAnimationFrame(animation)
-}
-
-function setSliderPosition() {
-  slider.style.transform = `translateX(${currentTranslate}px)`
-}
-
-function setPositionByIndex() {
-  currentTranslate = currentIndex * -window.innerWidth
-  prevTranslate = currentTranslate
-  setSliderPosition()
-}
+// Dot Position
+dots.forEach((dot, dotPosition) => {
+  dot.addEventListener("click", () => {
+    imgPosition = dotPosition
+    updatePosition(dotPosition)
+  })
+})
