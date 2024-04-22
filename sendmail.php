@@ -19,16 +19,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         //Server settings
         $mail->isSMTP();                                      
-        $mail->Host = 'smtp.gmail.com';  // Gmail SMTP server
+        $mail->Host = 'smtp.gmail.com';  
         $mail->SMTPAuth = true;                               
-        $mail->Username = 'jennymorgan0712@gmail.com';        // Your Gmail email address
-        $mail->Password = 'Poderosa12';               // Your Gmail password                           
+        $mail->Username = 'jennymorgan0712@gmail.com';        
+        $mail->Password = 'Poderosa12';                                       
         $mail->SMTPSecure = 'tls';                            
         $mail->Port = 587;                                    
 
         //Recipients
-        $mail->setFrom('jennymorgan0712@gmail.com', 'Your Name'); // Sender's email address and name
-        $mail->addAddress('jennymorgan0712@gmail.com');          // Your email address
+        $mail->setFrom('jennymorgan0712@gmail.com', 'Your Name'); 
+        $mail->addAddress('jennymorgan0712@gmail.com');          
 
         // Content
         $mail->isHTML(false);                              
