@@ -646,22 +646,20 @@ font-family: 'Trocchi', serif;
   height: 200px;
    }
    .costa {
-    height: 100vh;
+    height: 120vh;
     width: 200vh;
     opacity: 0.8;
    }
    .resume {
     position: absolute;
     z-index: 50;
-    top: 30px;
     height: 700px;
     width: 500px;
-  
-    margin-left: auto;
-    margin-right: auto;
-    top: 200%;
+    margin-top: 120px;
+    top: 190%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
     /* margin: 0 auto; */
    }
 
